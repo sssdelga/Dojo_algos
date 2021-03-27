@@ -1,13 +1,20 @@
-
-class SLL {
-    constructor(node) {
-        this.head = node;
+class Node {
+    constructor(value) {
+        this.val = value;
+        this.next = null;
     }
-    
+}
+class SLL {
+    constructor() {
+        this.head = null;
+    }
     // 1. Write a method that accepts a value and creates a new node, 
     // assign it to the list head, and return a pointer to the new head node.
     addFront(value) {
-        return this.//head
+        var newNode = new Node(value);
+        newNode.next = this.head;
+        this.head = newNode;
+        return this.head;
     }
 
     // 2. Write a method to remove the head node and return the new list head node. 
