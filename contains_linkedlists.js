@@ -23,7 +23,7 @@ class SLL {
             this.head=node;
         } else {
             var runner = this.head;
-            while(runner.val!=null){
+            while(runner!=null){
                 console.log('***addEnd test spot***');
                 if(runner.next==null){
                     console.log('entered end of list');
