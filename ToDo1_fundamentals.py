@@ -48,7 +48,24 @@ while x<5281:
 # If 2 given numbers represent your birth month and day in either order, 
 # log "How did you know?", else log "Just another day...."
 
+def is_bday(x,y):
+    if x == 11:
+        if y == 20:
+            print('how did you know?')
+        else:
+            print('just another day')
+    elif y == 11:
+        if x == 20:
+            print('how did you know?')
+        else:
+            print('just another day')
+    else:
+        print('just another day')
 
+is_bday(11,20) #true
+is_bday(12,28) #false
+is_bday(21,11) #false
+is_bday(20,11) #true
 
 
 # 7. Leap Year
@@ -75,7 +92,7 @@ print(is_leapyear(test3))
 # Print all integer multiples of 5, from 512 to 4096. Afterward, also log how many there were.
 
 ct = 0
-for i in range(512,4096):
+for i in range(512,696):
     if i%5 ==0:
         print(i)
         ct = ct +1
@@ -86,7 +103,7 @@ print(ct)
 # Print multiples of 6 up to 60,000, using a WHILE.
 
 y = 0
-while y<60001:
+while y<61:
     if y%6==0:
         print(y)
     y+=1
@@ -131,6 +148,12 @@ while i>0:
 # Based on earlier “Countdown by Fours”, given lowNum, highNum, mult, print multiples of mult from 
 # highNum down to lowNum, using a FOR. For (2,9,3), print 9 6 3 (on successive lines).
 
+def flex_ctdown(lowNum, highNum, mult):
+        for i in range(highNum,lowNum,-1):
+            if i%mult==0:
+                print(i)
+
+flex_ctdown(2,9,3)
 
 
 # 15. The Final Countdown
@@ -139,3 +162,21 @@ while i>0:
 # print the multiples of param1, starting at param2 and extending to param3. 
 # One exception: if a multiple is equal to param4, then skip (don’t print) it. Do this using a WHILE. 
 # Given (3,5,17,9), print 6,12,15 (which are all of the multiples of 3 between 5 and 17, and excluding the value 9).
+
+def fin_ctdown(p1,p2,p3,p4):
+    if p2>p3:
+    # assuming p2 > p3
+        while p2>p3:
+            if p2!=p4:
+                if p2%p1==0:
+                    print(p2)
+            p2-=1
+    else:
+    # p2 < p3
+        while p2<p3:
+            if p2!=p4:
+                if p2%p1==0:
+                    print(p2)
+            p2+=1
+
+fin_ctdown(3,5,17,9)
