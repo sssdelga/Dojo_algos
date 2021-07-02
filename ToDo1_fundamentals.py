@@ -94,22 +94,43 @@ while y<60001:
 # 10. Counting the Dojo Way
 # Print integers 1 to 100. If divisible by 5, print "Coding" instead. If by 10, also print " Dojo".
 
+for i in range(100):
+    if i%5==0:
+        print('coding')
+        if i%10==0:
+            print(' dojo')
+    else:
+        print(i)
 
 # 11. What Do You Know?
 # Your function will be given an input parameter incoming. Please console.log this value.
 
+def print_it(x):
+    print(x)
+
+print_it('what it do')
 
 # 12. Whoa That Suckers Huge
 # Add odd integers from -300,000 to 300,000, and console.log the final sum. Is there a shortcut?
 
+int_ct = 0
+for i in range(-30,30):
+    if i%2!=0:
+        int_ct+=i
+print(int_ct)
 
 # 13. Countdown by Fours
 # Log positive numbers starting at 2016, counting down by fours (exclude 0), without a FOR loop.
 
+i = 2016
+while i>0:
+    print(i)
+    i-=4
 
 # 14. Flexible Countdown
 # Based on earlier “Countdown by Fours”, given lowNum, highNum, mult, print multiples of mult from 
 # highNum down to lowNum, using a FOR. For (2,9,3), print 9 6 3 (on successive lines).
+
 
 
 # 15. The Final Countdown
